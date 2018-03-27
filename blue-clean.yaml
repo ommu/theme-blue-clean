@@ -1,0 +1,16 @@
+group_page: public
+name: Blue Clean
+folder: blue-clean
+layout: front_default
+thumbnail: blue-clean.png
+
+author:
+  name: Putra Sudaryanto
+  phone: (+62)856-299-4114
+  email: putra@sudaryanto.id
+  homepage: https://sudaryanto.id
+
+config:
+  ga:
+    label: Google Analytic Rules
+    rules: 

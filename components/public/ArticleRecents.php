@@ -46,10 +46,10 @@ class ArticleRecents extends CWidget
 		$currentModuleAction = strtolower(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id.'/'.Yii::app()->controller->action->id);
 		
 		//import model
-		Yii::import('application.modules.article.models.Articles');
-		Yii::import('application.modules.article.models.ArticleCategory');
-		Yii::import('application.modules.article.models.ArticleMedia');
-		Yii::import('application.modules.article.models.ViewArticles');
+		Yii::import('application.vendor.ommu.article.models.Articles');
+		Yii::import('application.vendor.ommu.article.models.ArticleCategory');
+		Yii::import('application.vendor.ommu.article.models.ArticleMedia');
+		Yii::import('application.vendor.ommu.article.models.ViewArticles');
 		
 		$criteria=new CDbCriteria;
 		$criteria->condition = 'publish = :publish AND published_date <= curdate()';

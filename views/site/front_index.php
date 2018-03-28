@@ -10,7 +10,6 @@
  */
 
 	Yii::import('webroot.themes.'.Yii::app()->theme->name.'.components.*');
-	Yii::import('webroot.themes.'.Yii::app()->theme->name.'.components.public.*');
 ?>
 
 <div class="main article clearfix">

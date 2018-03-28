@@ -10,6 +10,7 @@
  *
  */
 ?>
+
 <?php
 	$cs = Yii::app()->getClientScript();
 $js=<<<EOP
@@ -40,7 +41,7 @@ EOP;
 				$i = 0;
 				foreach($category as $key => $val) {
 					$i++;?>
-					<li id="<?php echo Utility::getUrlTitle(Phrase::trans($val->name))?>" <?php echo $i == 1 ? 'class="active"' : '';?>><a href="javascript:void(0);" title="<?php echo Phrase::trans($val->name);?>"><?php echo Phrase::trans($val->name);?></a></li>
+					<li id="<?php echo Utility::getUrlTitle($val->title->message)?>" <?php echo $i == 1 ? 'class="active"' : '';?>><a href="javascript:void(0);" title="<?php echo $val->title->message;?>"><?php echo $val->title->message;?></a></li>
 				<?php }?>
 			</ol>
 		</div>
@@ -48,12 +49,10 @@ EOP;
 		$i = 0;
 		foreach($category as $key => $val) {
 			$i++;?>	
-			<div id="main-<?php echo Utility::getUrlTitle(Phrase::trans($val->name))?>" class="main-content <?php echo $i != 1 ? 'hide' : ''?>">
+			<div id="main-<?php echo Utility::getUrlTitle($val->title->message)?>" class="main-content <?php echo $i != 1 ? 'hide' : ''?>">
 				<?php $this->widget('ArticleRecents', array(
 					'category'=>$val->cat_id,
-					'headline'=>false,
 					'code'=>'news',
-					'limit'=>4,
 					'photoShow'=>false,
 					'render'=>'partial',
 				));?>
@@ -75,7 +74,7 @@ if($model != null) {?>
 	$image = Yii::app()->request->baseUrl.'/public/article/article_default.png';
 	$medias = $model[0]->medias;
 	if(!empty($medias)) {
-		$media = $model[0]->view->media_cover ? $model[0]->view->media_cover : $medias[0]->media;
+		$media = $model[0]->view->article_cover ? $model[0]->view->article_cover : $medias[0]->cover_filename;
 		$image = Yii::app()->request->baseUrl.'/public/article/'.$model[0]->article_id.'/'.$media;
 	} ?>
 	<div class="sep full">
@@ -98,7 +97,7 @@ if($model != null) {?>
 			$image = Yii::app()->request->baseUrl.'/public/article/article_default.png';
 			$medias = $row->medias;
 			if(!empty($medias)) {
-				$media = $row->view->media_cover ? $row->view->media_cover : $medias[0]->media;
+				$media = $row->view->article_cover ? $row->view->article_cover : $medias[0]->cover_filename;
 				$image = Yii::app()->request->baseUrl.'/public/article/'.$row->article_id.'/'.$media;
 			}
 			if($j >= 2) {?>

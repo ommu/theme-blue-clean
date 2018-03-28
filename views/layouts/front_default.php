@@ -60,7 +60,7 @@
 					$condition = 1;
 				
 				if($condition == 0) {
-					$this->widget('MainArticleRecentNews', array(
+					$this->widget('MainArticleRecents', array(
 						'title'=>Yii::t('phrase', 'Berita Terbaru'),
 						'category'=>array(2,7,18),
 					));

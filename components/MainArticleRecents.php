@@ -1,6 +1,6 @@
 <?php
 
-class MainArticleRecentNews extends CWidget
+class MainArticleRecents extends CWidget
 {
 	public $title;
 	public $category;
@@ -33,7 +33,7 @@ class MainArticleRecentNews extends CWidget
 		
 		$category = ArticleCategory::model()->findAll($criteria);
 
-		$this->render('main_article_recent_news',array(
+		$this->render('main_article_recents',array(
 			'category' => $category,
 			'module' => $module,
 			'controller' => $controller,
@@ -41,6 +41,6 @@ class MainArticleRecentNews extends CWidget
 			'currentAction' => $currentAction,
 			'currentModule' => $currentModule,
 			'currentModuleAction' => $currentModuleAction,
-		));	
+		));
 	}
 }

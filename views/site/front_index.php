@@ -14,7 +14,7 @@
 
 <div class="main article clearfix">
 	<?php 
-	$this->widget('MainArticleRecentNews', array(
+	$this->widget('MainArticleRecents', array(
 		'title'=>Yii::t('phrase', 'Berita Terbaru'),
 		'category'=>array(2,7,18),
 	));

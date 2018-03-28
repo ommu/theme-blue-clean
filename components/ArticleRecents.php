@@ -19,18 +19,16 @@ class ArticleRecents extends CWidget
 	 *
 	 **/
 	public $title;
-	public $catNotIn;
+	public $catNotIn = false;
 	public $category;
-	public $code;
-	public $headline;
-	public $limit;
-	public $photoShow;
+	public $code = 'news';
+	public $headline = false;
+	public $limit = 4;
+	public $photoShow = true;
 	public $readmore;
 	public $render;
 	
 	public function init() {
-		if($this->photoShow)
-			$this->photoShow = true;
 	}
 
 	public function run() {
@@ -56,7 +54,8 @@ class ArticleRecents extends CWidget
 		$criteria->params = array(
 			':publish'=>1,
 		);
-		if($this->catNotIn == null || ($this->catNotIn != null && $this->catNotIn == false)) {
+		
+		if($this->catNotIn == false) {
 			if(is_array($this->category))
 				$criteria->addInCondition('cat_id', $this->category);
 			else
@@ -67,27 +66,24 @@ class ArticleRecents extends CWidget
 			else
 				$criteria->addNotInCondition('cat_id', array($this->category));
 		}
-		if($this->headline && $this->headline == false)
+		if($this->headline == true)
 			$criteria->compare('headline', 0);
 		$criteria->order = 'published_date DESC, article_id DESC';
-		$criteria->limit = $this->limit != null ? $this->limit : 5;
+		$criteria->limit = $this->limit;
 			
 		$model = Articles::model()->findAll($criteria);
-
-		if($this->render == null || ($this->render != null && $this->render != 'partial'))
-			$render = 'article_recents';
-		else
-			$render = '_view_article_recents';
+		
+		$render = $this->render == 'partial' ? '_view_article_recents' : 'article_recents';
 
 		$this->render($render, array(
 			'model' => $model,
+			'code' => $this->code,
 			'module' => $module,
 			'controller' => $controller,
 			'action' => $action,
 			'currentAction' => $currentAction,
 			'currentModule' => $currentModule,
 			'currentModuleAction' => $currentModuleAction,
-			'code' => $this->code,
 		));	
 	}
 }

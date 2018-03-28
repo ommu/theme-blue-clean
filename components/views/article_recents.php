@@ -9,6 +9,7 @@
 	<?php }?>
 	
 	<?php $this->render('_view_article_recents',array(
+		'code' => $this->code,
 		'model'=>$model,
 		'module' => $module,
 		'controller' => $controller,
@@ -16,7 +17,6 @@
 		'currentAction' => $currentAction,
 		'currentModule' => $currentModule,
 		'currentModuleAction' => $currentModuleAction,
-		'code' => $this->code,
 	)); ?>
 </div>
 <?php }?>

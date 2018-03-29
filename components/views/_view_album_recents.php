@@ -14,7 +14,7 @@
 			$image = Yii::app()->request->baseUrl.'/public/album/'.$val->album_id.'/'.$media;
 		}
 		
-		if($i == 1 && $this->coverShow == true) {?>			
+		if($i == 1 && $this->coverShow == true) {?>	
 			<li <?php echo !empty($photos) ? 'class="solid"' : '';?>>
 				<a href="<?php echo $url;?>" title="<?php echo $title;?>">
 					<?php if(!empty($photos)) {?><img src="<?php echo Utility::getTimThumb($image, 230, 100, 1)?>" alt="<?php echo $title;?>" /><?php }?>

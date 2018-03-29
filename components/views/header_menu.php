@@ -1,68 +1,77 @@
-<?php 
-	$module = strtolower(Yii::app()->controller->module->id);
-	$controller = strtolower(Yii::app()->controller->id);
-	$action = strtolower(Yii::app()->controller->action->id);
-	$currentAction = strtolower(Yii::app()->controller->id.'/'.Yii::app()->controller->action->id);
-	$currentModule = strtolower(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id);
-	$currentModuleAction = strtolower(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id.'/'.Yii::app()->controller->action->id);
-?>
 <ul class="clearfix">
 	<?php if($this->type == true) {?>
 		<li class="responsive-lx">
 			<a href="javascript:void(0);" title="<?php echo Yii::t('phrase', 'Menu');?>"><?php echo Yii::t('phrase', 'Menu');?></a>
 			<?php $this->widget('HeaderMenu', array(
 				'type'=>false,
-			)); ?>	
+			)); ?>
 		</li>
-	<?php }?>	
+	<?php }?>
 	<li class="<?php echo ($this->type == true ? (($module == null && $currentAction == 'site/index') ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('site/index');?>" title="Home">Home</a></li>
-	<li class="<?php echo ($this->type == true ? (($module != null && ($module == 'article' && $controller == 'news/site')) ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('article/news/site/index');?>" title="<?php echo Phrase::trans(1531)?>"><?php echo Phrase::trans(1531)?></a>
+	<li class="<?php echo ($this->type == true ? ($module == null && $currentAction == 'page/view' && in_array(Yii::app()->getRequest()->getParam('id'), array(6,5,7)) ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>6,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Sejarah BPAD Provinsi Daerah istimewa Yogyakarta'))))?>" title="<?php echo Yii::t('phrase', 'BPAD')?>"><?php echo Yii::t('phrase', 'BPAD')?></a>
 		<ul>
-			<li><a href="<?php echo Yii::app()->createUrl('article/news/site/index', array('category'=>7,'slug'=>Utility::getUrlTitle(Phrase::trans(1543))));?>" title="<?php echo Phrase::trans(1543)?>"><?php echo Phrase::trans(1543)?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('article/news/site/index', array('category'=>18,'slug'=>Utility::getUrlTitle(Phrase::trans(1573))));?>" title="<?php echo Phrase::trans(1573)?>"><?php echo Phrase::trans(1573)?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('article/news/site/index', array('category'=>3,'slug'=>Utility::getUrlTitle(Phrase::trans(1535))));?>" title="<?php echo Phrase::trans(1535)?>"><?php echo Phrase::trans(1535)?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('article/news/site/index', array('category'=>2,'slug'=>Utility::getUrlTitle(Phrase::trans(1533))));?>" title="<?php echo Phrase::trans(1533)?>"><?php echo Phrase::trans(1533)?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('article/news/site/index', array('category'=>5,'slug'=>Utility::getUrlTitle(Phrase::trans(1539))));?>" title="<?php echo Phrase::trans(1539)?>"><?php echo Phrase::trans(1539)?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('article/news/site/index', array('category'=>6,'slug'=>Utility::getUrlTitle(Phrase::trans(1541))));?>" title="<?php echo Phrase::trans(1541)?>"><?php echo Phrase::trans(1541)?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>6,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Sejarah BPAD Provinsi Daerah istimewa Yogyakarta'))))?>" title="<?php echo Yii::t('phrase', 'Sejarah BPAD Provinsi Daerah istimewa Yogyakarta');?>"><?php echo Yii::t('phrase', 'Sejarah BPAD');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>5,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Visi & Misi Badan Perpustakaan dan Arsip Daerah'))))?>" title="<?php echo Yii::t('phrase', 'Visi & Misi Badan Perpustakaan dan Arsip Daerah');?>"><?php echo Yii::t('phrase', 'Visi dan Misi');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>7,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Struktur Organisasi BPAD DIY'))))?>" title="<?php echo Yii::t('phrase', 'Struktur Organisasi BPAD DIY');?>"><?php echo Yii::t('phrase', 'Struktur Organisasi');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>22,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Tugas Pokok dan Fungsi'))))?>" title="<?php echo Yii::t('phrase', 'Tugas Pokok dan Fungsi');?>"><?php echo Yii::t('phrase', 'TUPOKSI');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>0000,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Program dan Kegiatan'))))?>" title="<?php echo Yii::t('phrase', 'Program dan Kegiatan');?>"><?php echo Yii::t('phrase', 'Program dan Kegiatan');?></a></li>
+		</ul>
+	</li>
+	<li class="<?php echo ($this->type == true ? ($module == 'article' && $controller == 'ppid' ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('article/ppid/index');?>" title="<?php echo Yii::t('phrase', 'PPID')?>"><?php echo Yii::t('phrase', 'PPID')?></a>
+		<ul>
+			<li><a href="<?php echo Yii::app()->createUrl('article/ppid/index', array('category'=>27,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Informasi Berkala'))));?>" title="<?php echo Yii::t('phrase', 'Informasi Berkala')?>"><?php echo Yii::t('phrase', 'Informasi Berkala')?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/ppid/index', array('category'=>28,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Informasi Setiap Saat'))));?>" title="<?php echo Yii::t('phrase', 'Informasi Setiap Saat')?>"><?php echo Yii::t('phrase', 'Informasi Setiap Saat')?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/ppid/index', array('category'=>29,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Informasi Serta Merta'))));?>" title="<?php echo Yii::t('phrase', 'Informasi Serta Merta')?>"><?php echo Yii::t('phrase', 'Informasi Serta Merta')?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/ppid/index', array('category'=>30,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Dokumen Informasi Publik'))));?>" title="<?php echo Yii::t('phrase', 'Dokumen Informasi Publik')?>"><?php echo Yii::t('phrase', 'Dokumen Informasi Publik')?></a></li>
+		</ul>
+	</li>
+	<li class="<?php echo ($this->type == true ? ($module == 'article' && $controller == 'news' ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('article/news/index');?>" title="<?php echo Yii::t('phrase', 'Berita')?>"><?php echo Yii::t('phrase', 'Berita')?></a>
+		<ul>
+			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>7,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Event'))));?>" title="<?php echo Yii::t('phrase', 'Event')?>"><?php echo Yii::t('phrase', 'Event')?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>18,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Pengumuman'))));?>" title="<?php echo Yii::t('phrase', 'Pengumuman')?>"><?php echo Yii::t('phrase', 'Pengumuman')?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>3,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Opini'))));?>" title="<?php echo Yii::t('phrase', 'Opini')?>"><?php echo Yii::t('phrase', 'Opini')?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>2,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'KCKR'))));?>" title="<?php echo Yii::t('phrase', 'KCKR')?>"><?php echo Yii::t('phrase', 'KCKR')?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>5,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Perpustakaan'))));?>" title="<?php echo Yii::t('phrase', 'Perpustakaan')?>"><?php echo Yii::t('phrase', 'Perpustakaan')?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>6,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Kearsipan'))));?>" title="<?php echo Yii::t('phrase', 'Kearsipan')?>"><?php echo Yii::t('phrase', 'Kearsipan')?></a></li>
 			<?php /*
-			<li><a href="<?php echo Yii::app()->createUrl('article/news/site/index', array('category'=>4,'slug'=>Utility::getUrlTitle(Phrase::trans(1537))));?>" title="<?php echo Phrase::trans(1537)?>"><?php echo Phrase::trans(1537)?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>4,'slug'=>Utility::getUrlTitle(Yii::t('phrase', '1537'))));?>" title="<?php echo Yii::t('phrase', '1537')?>"><?php echo Yii::t('phrase', '1537')?></a></li>
 			*/?>
 		</ul>
 	</li>
-	<li class="<?php echo ($this->type == true ? (($module != null && (in_array($currentModule, array('article/site','book/review','book/request')))) || ($module == null && $controller == 'page' && (isset($_GET['id']) && in_array($_GET['id'], array(10,11)))) ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('article/site/index');?>" title="<?php echo Phrase::trans(1545)?>"><?php echo Phrase::trans(1545)?></a>
+	<li class="<?php echo ($this->type == true ? (($module != null && (in_array($currentModule, array('article/library','book/review','book/request')))) || ($module == null && $controller == 'page' && (isset($_GET['id']) && in_array($_GET['id'], array(10,11)))) ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('article/library/index');?>" title="<?php echo Yii::t('phrase', 'Perpustakaan')?>"><?php echo Yii::t('phrase', 'Perpustakaan')?></a>
 		<ul>
-			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>11,'slug'=>Utility::getUrlTitle(Phrase::trans(1591))))?>" title="<?php echo Phrase::trans(1591);?>"><?php echo Phrase::trans(1591);?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>16,'slug'=>Utility::getUrlTitle(Phrase::trans(1624))))?>" title="<?php echo Phrase::trans(1624);?>"><?php echo Phrase::trans(1624);?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>17,'slug'=>Utility::getUrlTitle(Phrase::trans(1626))))?>" title="<?php echo Phrase::trans(1626);?>"><?php echo Phrase::trans(1626);?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>18,'slug'=>Utility::getUrlTitle(Phrase::trans(1628))))?>" title="<?php echo Phrase::trans(1628);?>"><?php echo Phrase::trans(1628);?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>10,'slug'=>Utility::getUrlTitle(Phrase::trans(1589))))?>" title="<?php echo Phrase::trans(1589);?>"><?php echo Phrase::trans(1589);?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('article/site/index');?>" title="<?php echo Phrase::trans(1547);?>"><?php echo Yii::t('phrase', 'Artikel');?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('article/regulation/site/index', array('category'=>13,'slug'=>Utility::getUrlTitle(Phrase::trans(1553).' '.Phrase::trans(1555))));?>" title="<?php echo Phrase::trans(1553).' '.Phrase::trans(1555);?>"><?php echo Phrase::trans(1553);?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>15,'slug'=>Utility::getUrlTitle(Phrase::trans(1622))))?>" title="<?php echo Phrase::trans(1622);?>"><?php echo Phrase::trans(1622);?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>19,'slug'=>Utility::getUrlTitle(Phrase::trans(1630))))?>" title="<?php echo Phrase::trans(1630);?>"><?php echo Phrase::trans(1630);?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>20,'slug'=>Utility::getUrlTitle(Phrase::trans(1632))))?>" title="<?php echo Phrase::trans(1632);?>"><?php echo Phrase::trans(1632);?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>21,'slug'=>Utility::getUrlTitle(Phrase::trans(1634))))?>" title="<?php echo Phrase::trans(1634);?>"><?php echo Phrase::trans(1634);?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>11,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Profil Balai Layanan Perpustakaan'))))?>" title="<?php echo Yii::t('phrase', 'Profil Balai Layanan Perpustakaan');?>"><?php echo Yii::t('phrase', 'Profil Balai Layanan Perpustakaan');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>16,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Layanan Perpustakaan'))))?>" title="<?php echo Yii::t('phrase', 'Layanan Perpustakaan');?>"><?php echo Yii::t('phrase', 'Layanan Perpustakaan');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>17,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Fasilitas Perpustakaan'))))?>" title="<?php echo Yii::t('phrase', 'Fasilitas Perpustakaan');?>"><?php echo Yii::t('phrase', 'Fasilitas Perpustakaan');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>18,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Koleksi Perpustakaan'))))?>" title="<?php echo Yii::t('phrase', 'Koleksi Perpustakaan');?>"><?php echo Yii::t('phrase', 'Koleksi Perpustakaan');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>10,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Keanggotaan'))))?>" title="<?php echo Yii::t('phrase', 'Keanggotaan');?>"><?php echo Yii::t('phrase', 'Keanggotaan');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/library/index');?>" title="<?php echo Yii::t('phrase', 'Artikel Perpustakaan');?>"><?php echo Yii::t('phrase', 'Artikel');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/regulation/index', array('category'=>13,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'eraturan Perundangan Perpustakaan').' '.Yii::t('phrase', '1555'))));?>" title="<?php echo Yii::t('phrase', 'eraturan Perundangan Perpustakaan').' '.Yii::t('phrase', '1555');?>"><?php echo Yii::t('phrase', 'Peraturan Perundangan');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>15,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Standar Pelayanan Publik'))))?>" title="<?php echo Yii::t('phrase', 'Standar Pelayanan Publik');?>"><?php echo Yii::t('phrase', 'Standar Pelayanan Publik');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>19,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'SOP'))))?>" title="<?php echo Yii::t('phrase', 'SOP');?>"><?php echo Yii::t('phrase', 'SOP');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>20,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Statistik Layanan'))))?>" title="<?php echo Yii::t('phrase', 'Statistik Layanan');?>"><?php echo Yii::t('phrase', 'Statistik Layanan');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>21,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'F.A.Q.'))))?>" title="<?php echo Yii::t('phrase', 'F.A.Q.');?>"><?php echo Yii::t('phrase', 'F.A.Q.');?></a></li>
 			<?php /*
 			<li><a href="<?php echo Yii::app()->createUrl('book/review/index')?>" title="<?php echo Yii::t('phrase', 'Resensi Buku');?>"><?php echo Yii::t('phrase', 'Resensi Buku');?></a></li>
 			<li><a href="<?php echo Yii::app()->createUrl('book/request/index')?>" title="<?php echo Yii::t('phrase', 'Usulan Buku');?>"><?php echo Yii::t('phrase', 'Usulan Buku');?></a></li>
 			*/?>
 		</ul>
 	</li>
-	<li class="<?php echo ($this->type == true ? ((($module != null && (in_array($currentModule, array('article/archive/site')))) || ($module == null && $controller == 'page' && (isset($_GET['id']) && $_GET['id'] == 12))) ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('article/archive/site/index');?>" title="<?php echo Phrase::trans(1551)?>"><?php echo Phrase::trans(1551)?></a>
+	<li class="<?php echo ($this->type == true ? ((($module != null && (in_array($currentModule, array('article/archive')))) || ($module == null && $controller == 'page' && (isset($_GET['id']) && $_GET['id'] == 12))) ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('article/archive/index');?>" title="<?php echo Yii::t('phrase', 'Kearsipan')?>"><?php echo Yii::t('phrase', 'Kearsipan')?></a>
 		<ul>
-			<li><a href="<?php echo Yii::app()->createUrl('article/archive/site/index', array('category'=>10,'slug'=>Utility::getUrlTitle(Phrase::trans(1549))));?>" title="<?php echo Phrase::trans(1549);?>">Artikel</a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('article/regulation/site/index', array('category'=>14,'slug'=>Utility::getUrlTitle(Phrase::trans(1553).' '.Phrase::trans(1557))));?>" title="<?php echo Phrase::trans(1553).' '.Phrase::trans(1557);?>"><?php echo Phrase::trans(1553);?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('article/archive/site/index', array('category'=>15,'slug'=>Utility::getUrlTitle(Phrase::trans(1567))));?>" title="<?php echo Phrase::trans(1567)?>"><?php echo Phrase::trans(1567)?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('article/archive/site/index', array('category'=>16,'slug'=>Utility::getUrlTitle(Phrase::trans(1569))));?>" title="<?php echo Phrase::trans(1569)?>"><?php echo Phrase::trans(1569)?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>12,'slug'=>Utility::getUrlTitle(Phrase::trans(1593))))?>" title="<?php echo Phrase::trans(1593);?>">Informasi Layanan</a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/archive/index', array('category'=>10,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Artikel Kearsipan'))));?>" title="<?php echo Yii::t('phrase', 'Artikel Kearsipan');?>"><?php echo Yii::t('phrase', 'Artikel');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/regulation/index', array('category'=>14,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Peraturan Perundangan').' '.Yii::t('phrase', '1557'))));?>" title="<?php echo Yii::t('phrase', 'Peraturan Perundangan').' '.Yii::t('phrase', '1557');?>"><?php echo Yii::t('phrase', 'Peraturan Perundangan');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/archive/index', array('category'=>15,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Standard Kearsipan'))));?>" title="<?php echo Yii::t('phrase', 'Standard Kearsipan')?>"><?php echo Yii::t('phrase', 'Standard Kearsipan')?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/archive/index', array('category'=>16,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Daftar Istilah'))));?>" title="<?php echo Yii::t('phrase', 'Daftar Istilah')?>"><?php echo Yii::t('phrase', 'Daftar Istilah')?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>12,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Informasi Layanan Kearsipan'))))?>" title="<?php echo Yii::t('phrase', 'Informasi Layanan Kearsipan');?>"><?php echo Yii::t('phrase', 'Informasi Layanan');?></a></li>
 		</ul>
 	</li>
-	<li class="<?php echo ($this->type == true ? (($module != null && (in_array($currentModule, array('album/site','video/site','article/announcement/site')))) ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('album/site/index');?>" title="<?php echo Yii::t('phrase', 'Galeri');?>"><?php echo Yii::t('phrase', 'Galeri');?></a>
+	<li class="<?php echo ($this->type == true ? (($module != null && (in_array($currentModule, array('album/site','video/site','article/announcement')))) ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('album/site/index');?>" title="<?php echo Yii::t('phrase', 'Galeri');?>"><?php echo Yii::t('phrase', 'Galeri');?></a>
 		<ul>
 			<li><a href="<?php echo Yii::app()->createUrl('album/site/index', array('type'=>'photo'));?>" title="<?php echo Yii::t('phrase', 'Photo BPAD D.I. Yogyakarta');?>"><?php echo Yii::t('phrase', 'Photo');?></a></li>
 			<li><a href="<?php echo Yii::app()->createUrl('video/site/index');?>" title="<?php echo Yii::t('phrase', 'Video BPAD D.I. Yogyakarta');?>"><?php echo Yii::t('phrase', 'Video');?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('article/newspaper/site/index');?>" title="<?php echo Phrase::trans(1595);?>"><?php echo Phrase::trans(1595);?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('article/announcement/site/index');?>" title="<?php echo Phrase::trans(1577);?>"><?php echo Phrase::trans(1577);?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/newspaper/index');?>" title="<?php echo Yii::t('phrase', 'Koran Lama Online');?>"><?php echo Yii::t('phrase', 'Koran Lama Online');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/announcement/index');?>" title="<?php echo Yii::t('phrase', 'Download');?>"><?php echo Yii::t('phrase', 'Download');?></a></li>
 			<?php /*
 			<li><a href="<?php echo Yii::app()->createUrl('site/analytics');?>" title="Analytics">Analytics</a></li>
 			*/?>

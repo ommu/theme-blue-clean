@@ -157,7 +157,7 @@ if(isset($_GET['protocol']) && $_GET['protocol'] == 'script') {
 				<div class="menu">
 					<?php $this->widget('HeaderMenu', array(
 						'type'=>true,
-					)); ?>	
+					)); ?>
 				</div>
 				<?php //begin.Search ?>
 				<div class="search">
@@ -213,7 +213,7 @@ if(isset($_GET['protocol']) && $_GET['protocol'] == 'script') {
 	<?php //end.Notifier ?>
 
 	<?php //begin.BodyContent ?>
-	<div class="body">		
+	<div class="body">
 		<div class="container">
 			<?php if($module == null && $currentAction == 'site/index') {
 				$this->widget('MainBannerRecent', array(
@@ -238,13 +238,14 @@ if(isset($_GET['protocol']) && $_GET['protocol'] == 'script') {
 				<div class="box about">
 					<h3><?php echo Yii::t('phrase', 'Tentang BPAD');?></h3>
 					<ul>
-						
-						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>6,'slug'=>Utility::getUrlTitle(Phrase::trans(1565))))?>" title="<?php echo Phrase::trans(1565);?>"><?php echo Yii::t('phrase', 'Sejarah BPAD');?></a></li>
-						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>5,'slug'=>Utility::getUrlTitle(Phrase::trans(1509))))?>" title="<?php echo Phrase::trans(1509);?>"><?php echo Yii::t('phrase', 'Visi dan Misi');?></a></li>
-						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>7,'slug'=>Utility::getUrlTitle(Phrase::trans(1583))))?>" title="<?php echo Phrase::trans(1583);?>"><?php echo Yii::t('phrase', 'Struktur Organisasi');?></a></li>
-						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>8,'slug'=>Utility::getUrlTitle(Phrase::trans(1585))))?>" title="<?php echo Phrase::trans(1585);?>"><?php echo Yii::t('phrase', 'Peta BPAD');?></a></li>
-						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>9,'slug'=>Utility::getUrlTitle(Phrase::trans(1587))))?>" title="<?php echo Phrase::trans(1587);?>"><?php echo Yii::t('phrase', 'Denah Ruangan');?></a></li>
-						<li><a href="<?php echo Yii::app()->createUrl('support/contact/feedback')?>" title="<?php echo Yii::t('phrase', 'Kontak Kami');?>"><?php echo Yii::t('phrase', 'Kontak Kami');?></a></li>				
+						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>6,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Sejarah BPAD Provinsi Daerah istimewa Yogyakarta'))))?>" title="<?php echo Yii::t('phrase', 'Sejarah BPAD Provinsi Daerah istimewa Yogyakarta');?>"><?php echo Yii::t('phrase', 'Sejarah BPAD');?></a></li>
+						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>5,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Visi & Misi Badan Perpustakaan dan Arsip Daerah'))))?>" title="<?php echo Yii::t('phrase', 'Visi & Misi Badan Perpustakaan dan Arsip Daerah');?>"><?php echo Yii::t('phrase', 'Visi dan Misi');?></a></li>
+						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>7,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Struktur Organisasi BPAD DIY'))))?>" title="<?php echo Yii::t('phrase', 'Struktur Organisasi BPAD DIY');?>"><?php echo Yii::t('phrase', 'Struktur Organisasi');?></a></li>
+						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>0000,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Tugas Pokok dan Fungsi'))))?>" title="<?php echo Yii::t('phrase', 'Tugas Pokok dan Fungsi');?>"><?php echo Yii::t('phrase', 'TUPOKSI');?></a></li>
+						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>0000,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Program dan Kegiatan'))))?>" title="<?php echo Yii::t('phrase', 'Program dan Kegiatan');?>"><?php echo Yii::t('phrase', 'Program dan Kegiatan');?></a></li>
+						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>8,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Peta Lokasi BPAD DIY'))))?>" title="<?php echo Yii::t('phrase', 'Peta Lokasi BPAD DIY');?>"><?php echo Yii::t('phrase', 'Peta BPAD');?></a></li>
+						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>9,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Denah Ruangan'))))?>" title="<?php echo Yii::t('phrase', 'Denah Ruangan');?>"><?php echo Yii::t('phrase', 'Denah Ruangan');?></a></li>
+						<li><a href="<?php echo Yii::app()->createUrl('support/contact/feedback')?>" title="<?php echo Yii::t('phrase', 'Kontak Kami');?>"><?php echo Yii::t('phrase', 'Kontak Kami');?></a></li>
 					</ul>
 				</div>
 				<div class="box link">
@@ -276,7 +277,7 @@ if(isset($_GET['protocol']) && $_GET['protocol'] == 'script') {
 			</div>
 		</div>
 		<div class="container copyright">
-			<?php $this->widget('FooterCopyright'); ?>			
+			<?php $this->widget('FooterCopyright'); ?>	
 		</div>
 	</footer>
 

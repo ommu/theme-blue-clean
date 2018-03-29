@@ -18,7 +18,7 @@
 		$title = $val->title;
 		$url = Yii::app()->createUrl('video/site/view', array('id'=>$val->video_id, 'slug'=>Utility::getUrlTitle($val->title)));
 		
-		if($i == 1 && $this->videoShow == true) {?>	
+		if($i == 1 && $this->videoShow == true) {?>
 			<li <?php echo $val->media != '' ? 'class="solid"' : '';?>>
 				<a href="<?php echo $url;?>" title="<?php echo $title;?>">
 					<?php if($val->media != '') {?><iframe width="230" src="https://www.youtube.com/embed/<?php echo $val->media;?>?disablekb=1&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe><?php }?>

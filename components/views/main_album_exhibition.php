@@ -11,7 +11,7 @@
 <div class="box recent-news-album no-margin">
 	<div class="title clearfix">
 		<h2><?php echo $title;?></h2>
-	</div>	
+	</div>
 	<a class="cover-full" href="<?php echo $url;?>" title="<?php echo $title;?>">
 		<?php if(!empty($photos)) {?><img src="<?php echo Utility::getTimThumb($image, 250, 270, 1)?>" alt="<?php echo $title;?>" /><?php }?>
 		<span>

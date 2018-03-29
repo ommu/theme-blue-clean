@@ -10,13 +10,13 @@ $ga->requestReportData($ga_profile_id, array('date'), array('pageviews','users')
 		<h5 class="cell">Date</h5>
 		<h5 class="cell"><?php echo Yii::t('phrase', 'Pages');?></h5>
 		<h5 class="cell"><?php echo Yii::t('phrase', 'Users');?></h5>
-	</div>	
+	</div>
 <?php foreach($ga->getResults() as $result):?>
 	<div class="row">
 		<span class="cell"><?php echo $result ?></span>
 		<span class="cell"><?php echo $result->getPageviews() ?></span>
 		<span class="cell"><?php echo $result->getUsers() ?></span>
-	</div>	
+	</div>
 <?php endforeach;?>
 </div>
 

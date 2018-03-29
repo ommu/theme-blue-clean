@@ -218,8 +218,8 @@ header .mainmenu .menu ul {
 header .mainmenu .menu ul li,
 header .mainmenu .menu ul li * {
 	text-decoration: none;
-	font-size: 15px;
-	line-height: 20px;
+	font-size: 13px;
+	line-height: 17px;
 	font-weight: 600;
 	color: #fff;
 	text-transform: uppercase;
@@ -233,7 +233,7 @@ header .mainmenu .menu ul li.responsive-lx {
 }
 header .mainmenu .menu ul li a {
 	display: block;
-	padding: 15px 30px;
+	padding: 13px 25px;
 }
 header .mainmenu .menu ul li:hover a {
 	background: #4584d3;
@@ -374,13 +374,13 @@ header #search form input[type="submit"] {
 /* =Body
 -------------------------------------------------------------- */
 .body .container {
-	padding: 20px 0 40px 0;
+	padding: 30px 0 40px 0;
 }
 .body h1 {
 	padding: 0 300px 0 0;
 	margin: 0 0 25px 0;
-	font-size: 30px;
-	line-height: 38px;
+	font-size: 22px;
+	line-height: 32px;
 	font-weight: 600;
 	color: #444;
 	text-transform: uppercase;

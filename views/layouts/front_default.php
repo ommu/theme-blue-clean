@@ -24,9 +24,9 @@
 			$class = 'search';
 		} else if(in_array($module, array('album','video')) || (in_array($currentModule, array('book/review')))) {
 			$class = 'article';
-		} else if(in_array($controller, array('site','news/site','archive/site','newspaper/site'))) {
+		} else if(in_array($controller, array('site','news','archive','newspaper'))) {
 			$class = $module;
-		} else if(in_array($controller, array('announcement/site','regulation/site'))) {
+		} else if(in_array($controller, array('announcement','regulation'))) {
 			$class = $module.'-download';
 		} else {
 			$class = Utility::getUrlTitle($module.'-'.$controller);
@@ -42,7 +42,7 @@
 <div id="<?php echo $class;?>" class="box-wrap <?php echo $this->sidebarShow == true ? 'ads-on' : '';?>">
 	
 	<?php if($this->sidebarShow == true) {?>
-		<div class="content <?php echo $action;?> <?php echo isset($_GET['category']) ? 'category-'.$_GET['category'] : '';?>">
+		<div class="content <?php echo $action != 'vieww' ? $action : 'view';?> <?php echo isset($_GET['category']) ? 'category-'.$_GET['category'] : '';?>">
 			<div class="boxed clearfix">
 				<?php echo $content;?>
 			</div>
@@ -56,7 +56,7 @@
 				*/?>
 				<?php 
 				$condition = 0;
-				if($module == 'article' && $controller == 'news/site')
+				if($module == 'article' && $controller == 'news')
 					$condition = 1;
 				
 				if($condition == 0) {
@@ -87,7 +87,7 @@
 						));
 					}					
 				}
-				if($module != 'article' || ($module == 'article' && !in_array($controller, array('site','archive/site')))) {
+				if($module != 'article' || ($module == 'article' && !in_array($controller, array('site','archive')))) {
 					$this->widget('ArticleRecents', array(
 						'title'=>Yii::t('phrase', 'Artikel Terbaru'),
 						'category'=>array(9,10),

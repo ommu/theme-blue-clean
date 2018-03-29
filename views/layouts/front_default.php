@@ -24,7 +24,7 @@
 			$class = 'search';
 		} else if(in_array($module, array('album','video')) || (in_array($currentModule, array('book/review')))) {
 			$class = 'article';
-		} else if(in_array($controller, array('site','news','archive','newspaper'))) {
+		} else if(in_array($controller, array('library','news','archive','newspaper'))) {
 			$class = $module;
 		} else if(in_array($controller, array('announcement','regulation'))) {
 			$class = $module.'-download';

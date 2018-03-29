@@ -1,0 +1,41 @@
+{
+	"name": "ommu/blue-clean",
+	"description": "Blue Clean - Company profile",
+	"keywords": [
+		"theme",
+		"frontend",
+		"company",
+		"profile",
+		"company profile",
+		"ommu",
+		"platform",
+		"ommu platform"
+	],
+	"homepage": "https://github.com/OmmuThemes/blue-clean",
+	"type": "ommu-theme",
+	"license": "Apache-2.0",
+	"support": {
+		"issues": "https://github.com/OmmuThemes/blue-clean/issues",
+		"wiki": "https://github.com/OmmuThemes/blue-clean/wiki",
+		"source": "https://github.com/OmmuThemes/blue-clean"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/OmmuThemes/blue-clean.git"
+	},
+	"authors": [
+		{
+			"name": "Putra Sudaryanto",
+			"email": "putra@sudaryanto.id",
+			"homepage": "https://putra.sudaryanto.id",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.3.2",
+		"oomphinc/composer-installers-extender": "^1.0",
+		"yiisoft/yii": "1.1.*"
+	},
+	"require-dev": {
+	}
+}

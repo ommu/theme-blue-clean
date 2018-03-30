@@ -27,12 +27,12 @@
 	</li>
 	<li class="<?php echo ($this->type == true ? ($module == 'article' && $controller == 'news' ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('article/news/index');?>" title="<?php echo Yii::t('phrase', 'Berita')?>"><?php echo Yii::t('phrase', 'Berita')?></a>
 		<ul>
+			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>5,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Perpustakaan'))));?>" title="<?php echo Yii::t('phrase', 'Perpustakaan')?>"><?php echo Yii::t('phrase', 'Perpustakaan')?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>6,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Kearsipan'))));?>" title="<?php echo Yii::t('phrase', 'Kearsipan')?>"><?php echo Yii::t('phrase', 'Kearsipan')?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>2,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'KCKR'))));?>" title="<?php echo Yii::t('phrase', 'KCKR')?>"><?php echo Yii::t('phrase', 'KCKR')?></a></li>
 			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>7,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Event'))));?>" title="<?php echo Yii::t('phrase', 'Event')?>"><?php echo Yii::t('phrase', 'Event')?></a></li>
 			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>18,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Pengumuman'))));?>" title="<?php echo Yii::t('phrase', 'Pengumuman')?>"><?php echo Yii::t('phrase', 'Pengumuman')?></a></li>
 			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>3,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Opini'))));?>" title="<?php echo Yii::t('phrase', 'Opini')?>"><?php echo Yii::t('phrase', 'Opini')?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>2,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'KCKR'))));?>" title="<?php echo Yii::t('phrase', 'KCKR')?>"><?php echo Yii::t('phrase', 'KCKR')?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>5,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Perpustakaan'))));?>" title="<?php echo Yii::t('phrase', 'Perpustakaan')?>"><?php echo Yii::t('phrase', 'Perpustakaan')?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>6,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Kearsipan'))));?>" title="<?php echo Yii::t('phrase', 'Kearsipan')?>"><?php echo Yii::t('phrase', 'Kearsipan')?></a></li>
 			<?php /*
 			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('category'=>4,'slug'=>Utility::getUrlTitle(Yii::t('phrase', '1537'))));?>" title="<?php echo Yii::t('phrase', '1537')?>"><?php echo Yii::t('phrase', '1537')?></a></li>
 			*/?>

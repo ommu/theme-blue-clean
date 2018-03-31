@@ -218,8 +218,8 @@ header .mainmenu .menu ul {
 header .mainmenu .menu ul li,
 header .mainmenu .menu ul li * {
 	text-decoration: none;
-	font-size: 13px;
-	line-height: 17px;
+	font-size: 14px;
+	line-height: 20px;
 	font-weight: 600;
 	color: #fff;
 	text-transform: uppercase;
@@ -233,7 +233,7 @@ header .mainmenu .menu ul li.responsive-lx {
 }
 header .mainmenu .menu ul li a {
 	display: block;
-	padding: 13px 25px;
+	padding: 13px 23px;
 }
 header .mainmenu .menu ul li:hover a {
 	background: #4584d3;
@@ -276,7 +276,7 @@ header .mainmenu .menu ul ul li a {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;	
-	padding: 10px 25px 10px 25px;
+	padding: 10px 18px 10px 18px;
 	font-size: 13px;
 	line-height: 17px;
 	font-weight: 600;

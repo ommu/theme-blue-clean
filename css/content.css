@@ -199,7 +199,18 @@ div.dialog#apps .dialog-box .content .boxed {
 }
 #page .content ol,
 #page .content ul {
-	margin: 0 0 20px 15px;
+	margin: 0 0 20px 20px;
+}
+#page .content ol li,
+#page .content ul li {
+	padding-bottom: 8px;
+}
+#page .content ol li:last-child,
+#page .content ul li:last-child {
+	padding-bottom: 0px;
+}
+#page .content ol ul:first-child {
+	margin-top: 10px;
 }
 
 /* =Main

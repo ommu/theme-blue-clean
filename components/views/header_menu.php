@@ -13,8 +13,15 @@
 			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>6,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Sejarah BPAD Provinsi Daerah istimewa Yogyakarta'))))?>" title="<?php echo Yii::t('phrase', 'Sejarah BPAD Provinsi Daerah istimewa Yogyakarta');?>"><?php echo Yii::t('phrase', 'Sejarah BPAD');?></a></li>
 			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>5,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Visi & Misi Badan Perpustakaan dan Arsip Daerah'))))?>" title="<?php echo Yii::t('phrase', 'Visi & Misi Badan Perpustakaan dan Arsip Daerah');?>"><?php echo Yii::t('phrase', 'Visi dan Misi');?></a></li>
 			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>7,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Struktur Organisasi BPAD DIY'))))?>" title="<?php echo Yii::t('phrase', 'Struktur Organisasi BPAD DIY');?>"><?php echo Yii::t('phrase', 'Struktur Organisasi');?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>22,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Tugas Pokok dan Fungsi'))))?>" title="<?php echo Yii::t('phrase', 'Tugas Pokok dan Fungsi');?>"><?php echo Yii::t('phrase', 'TUPOKSI');?></a></li>
-			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>0000,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Program dan Kegiatan'))))?>" title="<?php echo Yii::t('phrase', 'Program dan Kegiatan');?>"><?php echo Yii::t('phrase', 'Program dan Kegiatan');?></a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>22,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Tugas Pokok dan Fungsi'))))?>" title="<?php echo Yii::t('phrase', 'Tugas Pokok dan Fungsi');?>"><?php echo Yii::t('phrase', 'TUPOKSI');?></a>
+			<ul>
+				<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>23,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'TUPOKSI Sekretariat'))))?>" title="<?php echo Yii::t('phrase', 'TUPOKSI Sekretariat');?>"><?php echo Yii::t('phrase', 'Sekretariat');?></a></li>
+				<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>24,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'TUPOKSI Bidang Pengembangan Perpustakaan'))))?>" title="<?php echo Yii::t('phrase', 'TUPOKSI Bidang Pengembangan Perpustakaan');?>"><?php echo Yii::t('phrase', 'Bidang Pengembangan Perpustakaan');?></a></li>
+				<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>25,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'TUPOKSI Bidang Arsip Dinamis'))))?>" title="<?php echo Yii::t('phrase', 'TUPOKSI Bidang Arsip Dinamis');?>"><?php echo Yii::t('phrase', 'Bidang Arsip Dinamis');?></a></li>
+				<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>26,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'TUPOKSI Bidang Arsip Statis'))))?>" title="<?php echo Yii::t('phrase', 'TUPOKSI Bidang Arsip Statis');?>"><?php echo Yii::t('phrase', 'Bidang Arsip Statis');?></a></li>
+			</ul>
+			</li>
+			<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('id'=>31,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Program dan Kegiatan'))))?>" title="<?php echo Yii::t('phrase', 'Program dan Kegiatan');?>"><?php echo Yii::t('phrase', 'Program dan Kegiatan');?></a></li>
 		</ul>
 	</li>
 	<li class="<?php echo ($this->type == true ? ($module == 'article' && $controller == 'ppid' ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('article/ppid/index');?>" title="<?php echo Yii::t('phrase', 'PPID')?>"><?php echo Yii::t('phrase', 'PPID')?></a>
@@ -81,7 +88,9 @@
 		<ul>
 			<li><a target="_blank" href="http://ijogja.bpadjogja.info" title="<?php echo Yii::t('phrase', 'iJogja');?>"><?php echo Yii::t('phrase', 'iJogja');?></a></li>
 			<li><a target="_blank" href="http://opac.bpadjogja.info" title="<?php echo Yii::t('phrase', 'Katalog Buku BPAD D.I. Yogyakarta');?>"><?php echo Yii::t('phrase', 'OPAC');?></a></li>
+			<?php /*
 			<li><a target="_blank" href="http://sso.bpadjogja.info" title="<?php echo Yii::t('phrase', 'Single Sign-On Grhatama Pustaka');?>"><?php echo Yii::t('phrase', 'Single Sign-On');?></a></li>
+			*/?>
 			<li><a target="_blank" href="http://simpul.jikn.go.id/Default.aspx?sid=igcDGoRx3MNphIxTGMb88w==" title="<?php echo Yii::t('phrase', 'JIKN BPAD D.I. Yogyakarta');?>"><?php echo Yii::t('phrase', 'JIKN BPAD DIY');?></a></li>
 			<?php /*
 			<li><a href="<?php echo Yii::app()->createUrl('article/journal/form');?>" title="<?php echo Yii::t('phrase', 'Form Request Journal');?>"><?php echo Yii::t('phrase', 'Form Request Journal');?></a></li>

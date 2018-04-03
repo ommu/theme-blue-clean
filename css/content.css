@@ -184,7 +184,7 @@ div.dialog#apps .dialog-box .content .boxed {
 	margin: 0 20px 15px 0;
 }
 #page .content img.largemag {
-	width: 100%;
+	width: 100% !important;
 	margin: 0 0 20px 0;
 }
 #page .content h3 {

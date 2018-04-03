@@ -243,8 +243,10 @@ if(isset($_GET['protocol']) && $_GET['protocol'] == 'script') {
 						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>7,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Struktur Organisasi BPAD DIY'))))?>" title="<?php echo Yii::t('phrase', 'Struktur Organisasi BPAD DIY');?>"><?php echo Yii::t('phrase', 'Struktur Organisasi');?></a></li>
 						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>22,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Tugas Pokok dan Fungsi'))))?>" title="<?php echo Yii::t('phrase', 'Tugas Pokok dan Fungsi');?>"><?php echo Yii::t('phrase', 'TUPOKSI');?></a></li>
 						<li><a href="<?php echo Yii::app()->createUrl('article/news/index', array('id'=>31,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Program dan Kegiatan'))))?>" title="<?php echo Yii::t('phrase', 'Program dan Kegiatan');?>"><?php echo Yii::t('phrase', 'Program dan Kegiatan');?></a></li>
+						<?php /*
 						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>8,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Peta Lokasi BPAD DIY'))))?>" title="<?php echo Yii::t('phrase', 'Peta Lokasi BPAD DIY');?>"><?php echo Yii::t('phrase', 'Peta BPAD');?></a></li>
 						<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>9,'slug'=>Utility::getUrlTitle(Yii::t('phrase', 'Denah Ruangan'))))?>" title="<?php echo Yii::t('phrase', 'Denah Ruangan');?>"><?php echo Yii::t('phrase', 'Denah Ruangan');?></a></li>
+						*/?>
 						<li><a href="<?php echo Yii::app()->createUrl('support/contact/feedback')?>" title="<?php echo Yii::t('phrase', 'Kontak Kami');?>"><?php echo Yii::t('phrase', 'Kontak Kami');?></a></li>
 					</ul>
 				</div>

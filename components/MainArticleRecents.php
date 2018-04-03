@@ -29,7 +29,7 @@ class MainArticleRecents extends CWidget
 			$criteria->addInCondition('cat_id', $this->category);
 		else
 			$criteria->compare('cat_id',$this->category);
-		$criteria->order = 'cat_id DESC';
+		//$criteria->order = 'cat_id DESC';
 		
 		$category = ArticleCategory::model()->findAll($criteria);
 

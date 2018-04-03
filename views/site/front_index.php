@@ -16,7 +16,7 @@
 	<?php 
 	$this->widget('MainArticleRecents', array(
 		'title'=>Yii::t('phrase', 'Berita Terbaru'),
-		'category'=>array(2,7,18),
+		'category'=>array(5,6,2),
 	));
 	$this->widget('MainAlbumVideoRecents', array(
 		'title'=>Yii::t('phrase', 'Album Terbaru'),

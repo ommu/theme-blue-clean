@@ -44,9 +44,9 @@ class AlbumRecents extends CWidget
 		$currentModuleAction = strtolower(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id.'/'.Yii::app()->controller->action->id);
 		
 		//import model
-		Yii::import('application.modules.album.models.AlbumPhoto');
-		Yii::import('application.modules.album.models.Albums');
-		Yii::import('application.modules.album.models.ViewAlbums');
+		Yii::import('application.vendor.ommu.album.models.AlbumPhoto');
+		Yii::import('application.vendor.ommu.album.models.Albums');
+		Yii::import('application.vendor.ommu.album.models.ViewAlbums');
 		
 		$criteria=new CDbCriteria;
 		$criteria->condition = 'publish = :publish';

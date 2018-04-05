@@ -4,7 +4,7 @@
 	
 	$photos = $model->photos;
 	if(!empty($photos)) {
-		$media = $model->view->photo_cover ? $model->view->photo_cover : $photos[0]->media;
+		$media = $model->view->album_cover ? $model->view->album_cover : $photos[0]->media;
 		$image = Yii::app()->request->baseUrl.'/public/album/'.$model->album_id.'/'.$media;
 	}
 ?>

@@ -8,20 +8,19 @@
 		"profile",
 		"company profile",
 		"ommu",
-		"platform",
 		"ommu platform"
 	],
-	"homepage": "https://github.com/OmmuThemes/blue-clean",
+	"homepage": "https://github.com/ommu/theme-blue-clean",
 	"type": "ommu-theme",
 	"license": "Apache-2.0",
 	"support": {
-		"issues": "https://github.com/OmmuThemes/blue-clean/issues",
-		"wiki": "https://github.com/OmmuThemes/blue-clean/wiki",
-		"source": "https://github.com/OmmuThemes/blue-clean"
+		"issues": "https://github.com/ommu/theme-blue-clean/issues",
+		"wiki": "https://github.com/ommu/theme-blue-clean/wiki",
+		"source": "https://github.com/ommu/theme-blue-clean"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/OmmuThemes/blue-clean.git"
+		"url": "https://github.com/ommu/theme-blue-clean.git"
 	},
 	"authors": [
 		{

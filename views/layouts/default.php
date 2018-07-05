@@ -254,14 +254,14 @@ if(isset($_GET['protocol']) && $_GET['protocol'] == 'script') {
 					<h3><?php echo Yii::t('phrase', 'Link Terkait');?></h3>
 					<ul>
 						<li><a target="_blank" href="http://www.jogjalib.com/" title="<?php echo Yii::t('phrase', 'Jogja Library');?>"><?php echo Yii::t('phrase', 'Jogja Library');?></a></li>
-						<li><a target="_blank" href="http://mlib.bpadjogja.info/" title="<?php echo Yii::t('phrase', 'Jogja Mobile Library');?>"><?php echo Yii::t('phrase', 'Jogja Mobile Library');?></a></li>
-						<li><a target="_blank" href="http://sidkkas.bpadjogja.info/" title="<?php echo Yii::t('phrase', 'Aplikasi Daftar Katalog Khasanah Arsip Statis');?>"><?php echo Yii::t('phrase', 'Aplikasi Daftar Katalog Khasanah Arsip Statis');?></a></li>
-						<li><a target="_blank" href="http://siks.bpadjogja.info/" title="<?php echo Yii::t('phrase', 'Aplikasi Kearsipan Statis');?>"><?php echo Yii::t('phrase', 'Aplikasi Kearsipan Statis');?></a></li>
-						<li><a target="_blank" href="http://coe.bpadjogja.info/" title="<?php echo Yii::t('phrase', 'Centre of Excellence');?>"><?php echo Yii::t('phrase', 'Centre of Excellence');?></a></li>
-						<li><a target="_blank" href="http://gis.bpadjogja.info/" title="<?php echo Yii::t('phrase', 'WebGis BPAD Jogja');?>"><?php echo Yii::t('phrase', 'WebGis BPAD Jogja');?></a></li>
-						<li><a target="_blank" href="http://rbm.bpadjogja.info/" title="<?php echo Yii::t('phrase', 'Rumah Belajar Modern');?>"><?php echo Yii::t('phrase', 'Rumah Belajar Modern');?></a></li>
+						<li><a target="_blank" href="http://bpad.jogjaprov.go.id/mlib" title="<?php echo Yii::t('phrase', 'Jogja Mobile Library');?>"><?php echo Yii::t('phrase', 'Jogja Mobile Library');?></a></li>
+						<li><a target="_blank" href="http://bpad.jogjaprov.go.id/sidkkas" title="<?php echo Yii::t('phrase', 'Aplikasi Daftar Katalog Khasanah Arsip Statis');?>"><?php echo Yii::t('phrase', 'Aplikasi Daftar Katalog Khasanah Arsip Statis');?></a></li>
+						<li><a target="_blank" href="http://bpad.jogjaprov.go.id/siks" title="<?php echo Yii::t('phrase', 'Aplikasi Kearsipan Statis');?>"><?php echo Yii::t('phrase', 'Aplikasi Kearsipan Statis');?></a></li>
+						<li><a target="_blank" href="http://bpad.jogjaprov.go.id/coe" title="<?php echo Yii::t('phrase', 'Centre of Excellence');?>"><?php echo Yii::t('phrase', 'Centre of Excellence');?></a></li>
+						<li><a target="_blank" href="http://bpad.jogjaprov.go.id/gis" title="<?php echo Yii::t('phrase', 'WebGis BPAD Jogja');?>"><?php echo Yii::t('phrase', 'WebGis BPAD Jogja');?></a></li>
+						<li><a target="_blank" href="http://bpad.jogjaprov.go.id/rbm" title="<?php echo Yii::t('phrase', 'Rumah Belajar Modern');?>"><?php echo Yii::t('phrase', 'Rumah Belajar Modern');?></a></li>
 						<?php /*
-						<li><a target="_blank" href="http://budaya.bpadjogja.info/" title="<?php echo Yii::t('phrase', 'Aplikasi Jaringan Budaya');?>"><?php echo Yii::t('phrase', 'Aplikasi Jaringan Budaya');?></a></li>
+						<li><a target="_blank" href="http://bpad.jogjaprov.go.id/budaya" title="<?php echo Yii::t('phrase', 'Aplikasi Jaringan Budaya');?>"><?php echo Yii::t('phrase', 'Aplikasi Jaringan Budaya');?></a></li>
 						<li><a target="_blank" href="" title=""></a></li>
 						*/?>
 					</ul>

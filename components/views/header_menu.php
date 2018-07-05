@@ -86,10 +86,10 @@
 	</li>
 	<li class="<?php echo ($this->type == true ? 'responsive-ls' : '');?>"><a href="javascript:void(0);" title="<?php echo Yii::t('phrase', 'e-Resources');?>"><?php echo Yii::t('phrase', 'e-Resources');?></a>
 		<ul>
-			<li><a target="_blank" href="http://ijogja.bpadjogja.info" title="<?php echo Yii::t('phrase', 'iJogja');?>"><?php echo Yii::t('phrase', 'iJogja');?></a></li>
-			<li><a target="_blank" href="http://opac.bpadjogja.info" title="<?php echo Yii::t('phrase', 'Katalog Buku BPAD D.I. Yogyakarta');?>"><?php echo Yii::t('phrase', 'OPAC');?></a></li>
+			<li><a target="_blank" href="http://bpad.jogjaprov.go.id/ijogja" title="<?php echo Yii::t('phrase', 'iJogja');?>"><?php echo Yii::t('phrase', 'iJogja');?></a></li>
+			<li><a target="_blank" href="http://bpad.jogjaprov.go.id/opac" title="<?php echo Yii::t('phrase', 'Katalog Buku BPAD D.I. Yogyakarta');?>"><?php echo Yii::t('phrase', 'OPAC');?></a></li>
 			<?php /*
-			<li><a target="_blank" href="http://sso.bpadjogja.info" title="<?php echo Yii::t('phrase', 'Single Sign-On Grhatama Pustaka');?>"><?php echo Yii::t('phrase', 'Single Sign-On');?></a></li>
+			<li><a target="_blank" href="http://bpad.jogjaprov.go.id/sso" title="<?php echo Yii::t('phrase', 'Single Sign-On Grhatama Pustaka');?>"><?php echo Yii::t('phrase', 'Single Sign-On');?></a></li>
 			*/?>
 			<li><a target="_blank" href="http://simpul.jikn.go.id/Default.aspx?sid=igcDGoRx3MNphIxTGMb88w==" title="<?php echo Yii::t('phrase', 'JIKN BPAD D.I. Yogyakarta');?>"><?php echo Yii::t('phrase', 'JIKN BPAD DIY');?></a></li>
 			<?php /*

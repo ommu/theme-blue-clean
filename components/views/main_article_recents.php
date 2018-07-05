@@ -41,7 +41,7 @@ EOP;
 				$i = 0;
 				foreach($category as $key => $val) {
 					$i++;?>
-					<li id="<?php echo Utility::getUrlTitle($val->title->message)?>" <?php echo $i == 1 ? 'class="active"' : '';?>><a href="javascript:void(0);" title="<?php echo $val->title->message;?>"><?php echo $val->title->message;?></a></li>
+					<li id="<?php echo $this->urlTitle($val->title->message)?>" <?php echo $i == 1 ? 'class="active"' : '';?>><a href="javascript:void(0);" title="<?php echo $val->title->message;?>"><?php echo $val->title->message;?></a></li>
 				<?php }?>
 			</ol>
 		</div>
@@ -49,7 +49,7 @@ EOP;
 		$i = 0;
 		foreach($category as $key => $val) {
 			$i++;?>
-			<div id="main-<?php echo Utility::getUrlTitle($val->title->message)?>" class="main-content <?php echo $i != 1 ? 'hide' : ''?>">
+			<div id="main-<?php echo $this->urlTitle($val->title->message)?>" class="main-content <?php echo $i != 1 ? 'hide' : ''?>">
 				<?php $this->widget('ArticleRecents', array(
 					'category'=>$val->cat_id,
 					'code'=>'news',
@@ -78,10 +78,10 @@ if($model != null) {?>
 		$image = Yii::app()->request->baseUrl.'/public/article/'.$model[0]->article_id.'/'.$media;
 	} ?>
 	<div class="sep full">
-		<a class="images" href="<?php echo Yii::app()->createUrl('article/news/vieww', array('id'=>$model[0]->article_id,'slug'=>Utility::getUrlTitle($model[0]->title)));?>" title="<?php echo $model[0]->title;?>">
+		<a class="images" href="<?php echo Yii::app()->createUrl('article/news/vieww', array('id'=>$model[0]->article_id,'slug'=>$this->urlTitle($model[0]->title)));?>" title="<?php echo $model[0]->title;?>">
 			<img src="<?php echo Utility::getTimThumb($image, 600, 250, 1);?>" alt="<?php echo $model[0]->title;?>" />
 		</a>
-		<a class="title" href="<?php echo Yii::app()->createUrl('article/news/vieww', array('id'=>$model[0]->article_id,'slug'=>Utility::getUrlTitle($model[0]->title)));?>" title="<?php echo $model[0]->title;?>"><?php echo $model[0]->title;?></a>
+		<a class="title" href="<?php echo Yii::app()->createUrl('article/news/vieww', array('id'=>$model[0]->article_id,'slug'=>$this->urlTitle($model[0]->title)));?>" title="<?php echo $model[0]->title;?>"><?php echo $model[0]->title;?></a>
 		<div class="meta-date clearfix">
 			<span class="date"><i class="fa fa-calendar"></i>&nbsp;<?php echo Utility::dateFormat($model[0]->published_date);?></span>
 			<span class="view"><i class="fa fa-eye"></i>&nbsp;<?php echo $model[0]->view->views ? $model[0]->view->views : 0;?></span>
@@ -102,10 +102,10 @@ if($model != null) {?>
 			}
 			if($j >= 2) {?>
 			<div class="sep">
-				<a class="images" href="<?php echo Yii::app()->createUrl('article/news/vieww', array('id'=>$row->article_id,'slug'=>Utility::getUrlTitle($row->title)));?>" title="<?php echo $row->title;?>">
+				<a class="images" href="<?php echo Yii::app()->createUrl('article/news/vieww', array('id'=>$row->article_id,'slug'=>$this->urlTitle($row->title)));?>" title="<?php echo $row->title;?>">
 					<img src="<?php echo Utility::getTimThumb($image, 300, 150, 1);?>" alt="<?php echo $row->title;?>" />
 				</a>
-				<a class="title" href="<?php echo Yii::app()->createUrl('article/news/vieww', array('id'=>$row->article_id,'slug'=>Utility::getUrlTitle($row->title)));?>" title="<?php echo $row->title;?>"><?php echo Utility::shortText(Utility::hardDecode($row->title),40);?></a>
+				<a class="title" href="<?php echo Yii::app()->createUrl('article/news/vieww', array('id'=>$row->article_id,'slug'=>$this->urlTitle($row->title)));?>" title="<?php echo $row->title;?>"><?php echo Utility::shortText(Utility::hardDecode($row->title),40);?></a>
 				<div class="meta-date clearfix">
 					<span class="date"><i class="fa fa-calendar"></i>&nbsp;<?php echo Utility::dateFormat($row->published_date);?></span>
 					<span class="view"><i class="fa fa-eye"></i>&nbsp;<?php echo $row->view->views ? $row->view->views : 0;?></span>

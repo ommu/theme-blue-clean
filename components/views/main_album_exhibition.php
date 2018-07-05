@@ -1,6 +1,6 @@
 <?php if($model != null) {
 	$title = ucwords(strtolower($model->title));
-	$url = Yii::app()->createUrl('album/exhibition/main', array('id'=>$model->album_id, 'slug'=>Utility::getUrlTitle($model->title)));
+	$url = Yii::app()->createUrl('album/exhibition/main', array('id'=>$model->album_id, 'slug'=>$this->urlTitle($model->title)));
 	
 	$photos = $model->photos;
 	if(!empty($photos)) {

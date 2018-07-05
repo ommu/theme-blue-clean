@@ -29,7 +29,7 @@
 		} else if(in_array($controller, array('announcement','regulation'))) {
 			$class = $module.'-download';
 		} else {
-			$class = Utility::getUrlTitle($module.'-'.$controller);
+			$class = $this->urlTitle($module.'-'.$controller);
 		}
 	}
 ?>

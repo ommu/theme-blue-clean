@@ -16,7 +16,7 @@
 	$i++;
 		//$title = ucwords(strtolower($val->title));
 		$title = $val->title;
-		$url = Yii::app()->createUrl('video/site/view', array('id'=>$val->video_id, 'slug'=>Utility::getUrlTitle($val->title)));
+		$url = Yii::app()->createUrl('video/site/view', array('id'=>$val->video_id, 'slug'=>$this->urlTitle($val->title)));
 		
 		if($i == 1 && $this->videoShow == true) {?>
 			<li <?php echo $val->media != '' ? 'class="solid"' : '';?>>

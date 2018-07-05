@@ -14,7 +14,7 @@
 				$code = 'archive';
 		}
 
-		$url = Yii::app()->createUrl('article/'.$code.'/vieww', array('id'=>$val->article_id, 'slug'=>Utility::getUrlTitle($val->title)));
+		$url = Yii::app()->createUrl('article/'.$code.'/vieww', array('id'=>$val->article_id, 'slug'=>$this->urlTitle($val->title)));
 		
 		$image = Yii::app()->request->baseUrl.'/public/article/article_default.png';
 		$medias = $val->medias;

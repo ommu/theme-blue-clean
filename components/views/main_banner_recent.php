@@ -21,7 +21,7 @@ if($model != null) {?>
 			<?php 
 			BannerViews::insertView($val->banner_id);		
 			if($val->url != '-') {?>
-				<a href="<?php echo Yii::app()->createUrl('banner/site/click', array('id'=>$val->banner_id, 'slug'=>Utility::getUrlTitle($val->title)))?>" title="<?php echo $val->title?>"><img src="<?php echo $image;?>" alt="<?php echo $val->title?>" /></a>
+				<a href="<?php echo Yii::app()->createUrl('banner/site/click', array('id'=>$val->banner_id, 'slug'=>$this->urlTitle($val->title)))?>" title="<?php echo $val->title?>"><img src="<?php echo $image;?>" alt="<?php echo $val->title?>" /></a>
 			<?php } else {?>
 				<img src="<?php echo $image;?>" alt="<?php echo $val->title?>" />
 			<?php }?>

@@ -6,7 +6,7 @@
 	$i++;
 		//$title = ucwords(strtolower($val->title));
 		$title = $val->title;
-		$url = Yii::app()->createUrl('album/site/view', array('id'=>$val->album_id, 'slug'=>Utility::getUrlTitle($val->title)));
+		$url = Yii::app()->createUrl('album/site/view', array('id'=>$val->album_id, 'slug'=>$this->urlTitle($val->title)));
 	
 		$photos = $val->photos;
 		if(!empty($photos)) {

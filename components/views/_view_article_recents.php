@@ -29,12 +29,12 @@
 					<?php if(!empty($medias)) {?><img src="<?php echo Utility::getTimThumb($image, 230, 100, 1)?>" alt="<?php echo $title;?>" /><?php }?>
 					<?php echo Utility::shortText(Utility::hardDecode($title),90);?>
 				</a>
-				<span><?php echo $val->creation->displayname.' / '.Utility::dateFormat($val->published_date);?></span>
+				<span><?php echo $val->creation->displayname.' / '.$this->dateFormat($val->published_date);?></span>
 			</li>
 		<?php } else {?>
 			<li>
 				<a href="<?php echo $url;?>" title="<?php echo $title?>"><?php echo Utility::shortText(Utility::hardDecode($title),90);?></a>
-				<span><?php echo $val->creation->displayname.' / '.Utility::dateFormat($val->published_date);?></span>
+				<span><?php echo $val->creation->displayname.' / '.$this->dateFormat($val->published_date);?></span>
 			</li>
 		<?php }
 	}?>

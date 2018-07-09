@@ -24,12 +24,12 @@
 					<?php if($val->media != '') {?><iframe width="230" src="https://www.youtube.com/embed/<?php echo $val->media;?>?disablekb=1&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe><?php }?>
 					<?php echo Utility::shortText(Utility::hardDecode($title),90);?> 
 				</a>
-				<span><?php echo $val->creation->displayname.' / '.Utility::dateFormat($val->creation_date);?></span>
+				<span><?php echo $val->creation->displayname.' / '.$this->dateFormat($val->creation_date);?></span>
 			</li>
 		<?php } else {?>
 			<li>
 				<a href="<?php echo $url;?>" title="<?php echo $title;?>"><?php echo Utility::shortText(Utility::hardDecode($title),90);?></a>
-				<span><?php echo $val->creation->displayname.' / '.Utility::dateFormat($val->creation_date);?></span>
+				<span><?php echo $val->creation->displayname.' / '.$this->dateFormat($val->creation_date);?></span>
 			</li>
 		<?php }
 	}?>

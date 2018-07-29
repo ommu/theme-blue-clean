@@ -38,7 +38,7 @@ class MainBannerRecent extends CWidget
 		$criteria=new CDbCriteria;
 		$criteria->with = array(
 			'category' => array(
-				'alias'=>'category',
+				'alias' => 'category',
 			),
 		);
 		$now = new CDbExpression("NOW()");

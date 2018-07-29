@@ -52,7 +52,7 @@ if(isset($_GET['protocol']) && $_GET['protocol'] == 'script') {
 	$urlAddress = Utility::getProtocol().'://'.Yii::app()->request->serverName.Yii::app()->request->requestUri;
 	$apps = $this->dialogDetail == true ? ($this->dialogFixed == false ? 'apps' : 'module') : '';
 
-	if(Yii::app()->request->isAjaxRequest && !isset($_GET['ajax'])) {
+	if(Yii::app()->request->isAjaxRequest && !Yii::app()->getRequest()->getParam('ajax')) {
 		/* if(Yii::app()->session['theme_active'] != Yii::app()->theme->name) {
 			$return = array(
 				'redirect' => $urlAddress,		
@@ -161,7 +161,7 @@ if(isset($_GET['protocol']) && $_GET['protocol'] == 'script') {
 				</div>
 				<?php //begin.Search ?>
 				<div class="search">
-					<?php $form=$this->beginWidget('CActiveForm', array(
+					<?php $form=$this->beginWidget('application.libraries.yii-traits.system.OActiveForm', array(
 						'action'=>Yii::app()->createUrl('search/result'),
 						'method'=>'get',
 					)); ?>
@@ -172,7 +172,7 @@ if(isset($_GET['protocol']) && $_GET['protocol'] == 'script') {
 			
 			<?php //begin.Search ?>
 			<div id="search" class="clearfix">
-				<?php $form=$this->beginWidget('CActiveForm', array(
+				<?php $form=$this->beginWidget('application.libraries.yii-traits.system.OActiveForm', array(
 					'action'=>Yii::app()->createUrl('search/result'),
 					'method'=>'get',
 					'htmlOptions'=>array(

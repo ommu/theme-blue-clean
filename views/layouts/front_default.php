@@ -42,7 +42,7 @@
 <div id="<?php echo $class;?>" class="box-wrap <?php echo $this->sidebarShow == true ? 'ads-on' : '';?>">
 	
 	<?php if($this->sidebarShow == true) {?>
-		<div class="content <?php echo $action != 'vieww' ? $action : 'view';?> <?php echo isset($_GET['category']) ? 'category-'.$_GET['category'] : '';?>">
+		<div class="content <?php echo $action != 'vieww' ? $action : 'view';?> <?php echo Yii::app()->getRequest()->getParam('category') ? 'category-'.Yii::app()->getRequest()->getParam('category') : '';?>">
 			<div class="boxed clearfix">
 				<?php echo $content;?>
 			</div>

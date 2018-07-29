@@ -83,7 +83,7 @@ if($model != null) {?>
 		</a>
 		<a class="title" href="<?php echo Yii::app()->createUrl('article/news/vieww', array('id'=>$model[0]->article_id,'slug'=>$this->urlTitle($model[0]->title)));?>" title="<?php echo $model[0]->title;?>"><?php echo $model[0]->title;?></a>
 		<div class="meta-date clearfix">
-			<span class="date"><i class="fa fa-calendar"></i>&nbsp;<?php echo Utility::dateFormat($model[0]->published_date);?></span>
+			<span class="date"><i class="fa fa-calendar"></i>&nbsp;<?php echo $this->dateFormat($model[0]->published_date, 'long', false);?></span>
 			<span class="view"><i class="fa fa-eye"></i>&nbsp;<?php echo $model[0]->view->views ? $model[0]->view->views : 0;?></span>
 		</div>
 		<p><?php echo Utility::shortText(Utility::hardDecode($model[0]->body),250);?></p>
@@ -107,7 +107,7 @@ if($model != null) {?>
 				</a>
 				<a class="title" href="<?php echo Yii::app()->createUrl('article/news/vieww', array('id'=>$row->article_id,'slug'=>$this->urlTitle($row->title)));?>" title="<?php echo $row->title;?>"><?php echo Utility::shortText(Utility::hardDecode($row->title),40);?></a>
 				<div class="meta-date clearfix">
-					<span class="date"><i class="fa fa-calendar"></i>&nbsp;<?php echo Utility::dateFormat($row->published_date);?></span>
+					<span class="date"><i class="fa fa-calendar"></i>&nbsp;<?php echo $this->dateFormat($row->published_date, 'long', false);?></span>
 					<span class="view"><i class="fa fa-eye"></i>&nbsp;<?php echo $row->view->views ? $row->view->views : 0;?></span>
 				</div>
 				<p><?php echo Utility::shortText(Utility::hardDecode($row->body),100);?></p>

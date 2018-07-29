@@ -45,7 +45,7 @@
 			*/?>
 		</ul>
 	</li>
-	<li class="<?php echo ($this->type == true ? (($module != null && (in_array($currentModule, array('article/library','book/review','book/request')))) || ($module == null && $controller == 'page' && (isset($_GET['id']) && in_array($_GET['id'], array(10,11)))) ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('article/library/index');?>" title="<?php echo Yii::t('phrase', 'Perpustakaan')?>"><?php echo Yii::t('phrase', 'Perpustakaan')?></a>
+	<li class="<?php echo ($this->type == true ? (($module != null && (in_array($currentModule, array('article/library','book/review','book/request')))) || ($module == null && $controller == 'page' && (in_array(Yii::app()->getRequest()->getParam('id'), array(10,11)))) ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('article/library/index');?>" title="<?php echo Yii::t('phrase', 'Perpustakaan')?>"><?php echo Yii::t('phrase', 'Perpustakaan')?></a>
 		<ul>
 			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>11,'slug'=>$this->urlTitle(Yii::t('phrase', 'Profil Balai Layanan Perpustakaan'))))?>" title="<?php echo Yii::t('phrase', 'Profil Balai Layanan Perpustakaan');?>"><?php echo Yii::t('phrase', 'Profil Balai Layanan Perpustakaan');?></a></li>
 			<li><a href="<?php echo Yii::app()->createUrl('page/view', array('id'=>16,'slug'=>$this->urlTitle(Yii::t('phrase', 'Layanan Perpustakaan'))))?>" title="<?php echo Yii::t('phrase', 'Layanan Perpustakaan');?>"><?php echo Yii::t('phrase', 'Layanan Perpustakaan');?></a></li>
@@ -64,7 +64,7 @@
 			*/?>
 		</ul>
 	</li>
-	<li class="<?php echo ($this->type == true ? ((($module != null && (in_array($currentModule, array('article/archive')))) || ($module == null && $controller == 'page' && (isset($_GET['id']) && $_GET['id'] == 12))) ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('article/archive/index');?>" title="<?php echo Yii::t('phrase', 'Kearsipan')?>"><?php echo Yii::t('phrase', 'Kearsipan')?></a>
+	<li class="<?php echo ($this->type == true ? ((($module != null && (in_array($currentModule, array('article/archive')))) || ($module == null && $controller == 'page' && (Yii::app()->getRequest()->getParam('id') == 12))) ? 'responsive-ls active' : 'responsive-ls') : '');?>"><a href="<?php echo Yii::app()->createUrl('article/archive/index');?>" title="<?php echo Yii::t('phrase', 'Kearsipan')?>"><?php echo Yii::t('phrase', 'Kearsipan')?></a>
 		<ul>
 			<li><a href="<?php echo Yii::app()->createUrl('article/archive/index', array('category'=>10,'slug'=>$this->urlTitle(Yii::t('phrase', 'Artikel Kearsipan'))));?>" title="<?php echo Yii::t('phrase', 'Artikel Kearsipan');?>"><?php echo Yii::t('phrase', 'Artikel');?></a></li>
 			<li><a href="<?php echo Yii::app()->createUrl('article/regulation/index', array('category'=>14,'slug'=>$this->urlTitle(Yii::t('phrase', 'Peraturan Perundangan').' '.Yii::t('phrase', '1557'))));?>" title="<?php echo Yii::t('phrase', 'Peraturan Perundangan').' '.Yii::t('phrase', '1557');?>"><?php echo Yii::t('phrase', 'Peraturan Perundangan');?></a></li>

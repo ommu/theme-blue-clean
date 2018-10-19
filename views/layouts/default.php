@@ -55,7 +55,7 @@ if(isset($_GET['protocol']) && $_GET['protocol'] == 'script') {
 	if(Yii::app()->request->isAjaxRequest && !Yii::app()->getRequest()->getParam('ajax')) {
 		/* if(Yii::app()->session['theme_active'] != Yii::app()->theme->name) {
 			$return = array(
-				'redirect' => $urlAddress,		
+				'redirect' => $urlAddress,
 			);
 
 		} else { */
@@ -78,7 +78,7 @@ if(isset($_GET['protocol']) && $_GET['protocol'] == 'script') {
 				'description' => $description,
 				'keywords' => $keywords,
 				'address' => $urlAddress,
-				'dialogWidth' => $dialogWidth,			
+				'dialogWidth' => $dialogWidth,
 			);
 			$return['page'] = $page;
 			$return['dialog'] = $dialog;

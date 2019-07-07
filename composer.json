@@ -1,18 +1,20 @@
 {
 	"name": "ommu/blue-clean",
 	"description": "Blue Clean - Company profile",
+	"type": "ommu-theme",
 	"keywords": [
 		"theme",
-		"frontend",
+		"blue-clean",
+		"front-template",
 		"company",
 		"profile",
-		"company profile",
+		"company-profile",
 		"ommu",
-		"ommu platform"
+		"ommu-platform",
+		"yii"
 	],
-	"homepage": "https://github.com/ommu/theme-blue-clean",
-	"type": "ommu-theme",
 	"license": "Apache-2.0",
+	"homepage": "https://github.com/ommu/theme-blue-clean",
 	"support": {
 		"issues": "https://github.com/ommu/theme-blue-clean/issues",
 		"wiki": "https://github.com/ommu/theme-blue-clean/wiki",
@@ -26,7 +28,7 @@
 		{
 			"name": "Putra Sudaryanto",
 			"email": "putra@sudaryanto.id",
-			"homepage": "https://putra.sudaryanto.id",
+			"homepage": "https://sudaryanto.id",
 			"role": "Developer"
 		}
 	],

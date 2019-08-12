@@ -3,8 +3,8 @@
  * @var $this SiteController
  * @var $dataProvider CActiveDataProvider
  *
- * @author Putra Sudaryanto <putra@sudaryanto.id>
- * @copyright Copyright (c) 2014 Ommu Platform (ommu.co)
+ * @author Putra Sudaryanto <putra@ommu.co>
+ * @copyright Copyright (c) 2014 Ommu Platform (www.ommu.co)
  * @link http://company.ommu.co
  * @contact (+62)856-299-4114
  *

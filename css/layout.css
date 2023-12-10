@@ -1,0 +1,169 @@
+/** 
+ * layout.css
+ * @author Putra Sudaryanto <putra@ommu.id>
+ * @copyright Copyright (c) 2014 OMMU (www.ommu.id)
+ * @contect (+62)856-299-4114
+ *
+ *	CSS Reset : reset default browser style
+ *	Loading and Dialog
+ *	Header
+ *	Body
+ *	Footer
+ *	Responsive
+ *
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700); 
+
+/* =CSS Reset : reset default browser style
+-------------------------------------------------------------*/
+html {
+	background: #21262a;
+	color: #333; 
+	font-size: 13px; 
+	line-height: 18px;
+	font-weight: 400;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+/* =Typography
+-------------------------------------------------------------*/
+h1, h2, h3, h5, h5, h6 {
+	font-family: 'Roboto', 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+/* =Header
+-------------------------------------------------------------*/
+header,
+main {
+	background: #fff;
+}
+
+/* =Main
+-------------------------------------------------------------*/
+
+/* =Footer
+-------------------------------------------------------------*/
+footer, 
+footer * {
+	color: #acacac;
+}
+footer {
+	background: #2f383d;
+}
+footer a {
+	color: #d8e9f9;
+}
+footer a:link {color: #d8e9f9;}
+footer a:hover {color: #d8e9f9;}
+footer a:visited {color: #afb9c2;}
+footer a:visited:hover {color: #afb9c2;}
+
+footer h5 {
+	color: #f0f0f0;
+	text-transform: uppercase;
+}
+footer h5:after {
+	content: '';
+	display: block;
+	width: 80px;
+	margin-top: 1rem !important;
+	border-bottom: 3px solid #78bcee;
+}
+footer .row div:nth-child(1) h5:after {
+	border-bottom: 3px solid #78bcee;
+}
+footer .row div:nth-child(2) h5:after {
+	border-bottom: 3px solid #4ca5e8;
+}
+footer .row div:nth-child(3) h5:after {
+	border-bottom: 3px solid #375ebc;
+}
+footer .row div:nth-child(4) h5:after,
+footer .row div:last-child h5:after {
+	border-bottom: 3px solid #274da8;
+}
+footer .address h5 span {
+	line-height: 1.5;
+}
+footer .address p {
+	position: relative;
+	padding-left: 25px;
+}
+footer .address p:last-child {
+	margin-bottom: 0 !important;
+}
+footer .address p i {
+	top: 2px;
+	left: 0;
+	font-size: 16px;
+	line-height: 20px;
+	color: #4ca5e8;
+}
+
+/* Copyright */
+.copyright {
+	background: #21262a;
+}
+
+
+
+@media (min-width: 576px) {
+	.position-sm-relative {
+		position: relative !important;
+	}
+	.position-sm-absolute {
+		position: absolute !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.position-md-relative {
+		position: relative !important;
+	}
+	.position-md-absolute {
+		position: absolute !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.position-lg-relative {
+		position: relative !important;
+	}
+	.position-lg-absolute {
+		position: absolute !important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.position-xl-relative {
+		position: relative !important;
+	}
+	.position-xl-absolute {
+		position: absolute !important;
+	}
+}
+
+@media only screen and (max-width:575px) {
+	footer .about h5:after {
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width:800px) {
+	footer .container {max-width: 100% !important;}
+}
+
+@media only screen and (max-width:991px) {
+	footer .address {
+		border-top: 1px dashed #aaa;
+	}
+	footer .address h5:after {
+		margin: 0 auto;
+	}
+	footer .address p {
+		padding-left: 0;
+	}
+}

@@ -1,0 +1,14 @@
+name: BlueClean
+desc: BlueClean - Bootstrap 4 Company Profile Template
+
+author:
+  name: Putra Sudaryanto
+  phone: (+62)856-299-4114
+  email: putra@ommu.id
+  homepage: https://ommu.id
+
+ignore_asset_class:
+  - yii\bootstrap\BootstrapAsset
+
+theme_setting:
+  bootstrap4: true
